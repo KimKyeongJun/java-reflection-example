@@ -59,5 +59,13 @@ public class App
             System.out.println(m.getParameterTypes());
         });
 
+
+
+
+        Arrays.stream(Book.class.getAnnotations()).forEach(System.out::println);
+
+        // 자기 자신에만 붙어있는 애노테이션 조회
+        Arrays.stream(Book.class.getDeclaredAnnotations()).forEach(System.out::println);
+
     }
 }
